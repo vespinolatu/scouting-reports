@@ -1,0 +1,717 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Momo Nakao</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2790f804-424d-80c7-aada-dec9d5d57e92" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="images_(2).jpg"/></div><h1 class="page-title" dir="auto"><strong>Momo Nakao</strong></h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Position</th><td><span class="selected-value select-value-color-brown">CAM</span><span class="selected-value select-value-color-gray">CDM</span><span class="selected-value select-value-color-default">CM</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Player Age</th><td>23</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Player Team</th><td>Celtic LFC</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Player Height</th><td>157cm  / 5’2”</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/globe_gray.svg" style="width:14px;height:14px;display:block"/></span>Nation</th><td>Japan</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/signature-document_gray.svg" style="width:14px;height:14px;display:block"/></span>Contract Status</th><td>Until 30.06.2026</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Rating (0-10)</th><td>7</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Verdict</th><td><span class="selected-value select-value-color-blue">Emerging Talent</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Strengths</th><td><span class="selected-value select-value-color-green">Agility</span><span class="selected-value select-value-color-green">Composure</span><span class="selected-value select-value-color-green">Passing</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Weaknesses</th><td><span class="selected-value select-value-color-red">Heading</span><span class="selected-value select-value-color-red">Strength</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Fixture</th><td><strong>Aberdeen vs Celtic —- Celtic vs Hibernian</strong></td></tr><tr class="property-row property-row-person"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/friends_gray.svg" style="width:14px;height:14px;display:block"/></span>Scout Report By</th><td><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocJx1VL9NikhoNGAw24wKrITcWkHAjsnFmqYp8zhZfp16W5jrg=s100" class="icon user-icon"/>Victor Espinola</span></td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>Scout Report Date</th><td><time>@06/10/2025</time></td></tr></tbody></table></header><div class="page-body"><div style="display:contents" dir="auto"><div id="2790f804-424d-8062-8b3c-d39a64b725c7" class="column-list"><div style="display:contents" dir="auto"><div id="2790f804-424d-804d-87d9-ff09767f8479" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="2790f804-424d-8040-91e0-d80168103d5d" class="block-color-red_background">Technical / Tactical</h3></div><div style="display:contents" dir="auto"><ul id="2790f804-424d-8066-a3cf-c3065d6f7293" class="bulleted-list"><li style="list-style-type:disc"><strong>Guides tempo</strong>: deepest midfielder, dictates circulation and offers passing stability.</li></ul></div><div style="display:contents" dir="auto"><ul id="2840f804-424d-802b-959e-fc9d6905823a" class="bulleted-list"><li style="list-style-type:disc">Combines excellent spatial awareness with a quick first touch, enabling smooth one-touch play under pressure</li></ul></div><div style="display:contents" dir="auto"><ul id="27f0f804-424d-80b8-9d4d-e16bddc06f89" class="bulleted-list"><li style="list-style-type:disc"><strong>Quick acceleration over short distances</strong>, helps evade pressure even if lacking top-end speed.</li></ul></div><div style="display:contents" dir="auto"><ul id="27f0f804-424d-8066-8f13-d1d048a00c61" class="bulleted-list"><li style="list-style-type:disc"><strong>Transitions defence to attack</strong> through safe progressive passes.</li></ul></div><div style="display:contents" dir="auto"><ul id="2840f804-424d-8050-93fc-f5070a405e46" class="bulleted-list"><li style="list-style-type:disc">Occasionally deployed higher up, operating <em>behind the striker</em> in advanced midfield roles.</li></ul></div><div style="display:contents" dir="auto"><ul id="27f0f804-424d-80f7-831a-dd31a64ff357" class="bulleted-list"><li style="list-style-type:disc"><strong>Presses effectively in ground duels</strong> (72.6% win rate).</li></ul></div><div style="display:contents" dir="auto"><ul id="27f0f804-424d-803f-8ebf-c55657325dcb" class="bulleted-list"><li style="list-style-type:disc">Long passing remains inconsistent</li></ul></div></div></div><div style="display:contents" dir="auto"><div id="2790f804-424d-8023-88a5-f97372e01979" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="2790f804-424d-80bc-b5a3-f7041b34b31e" class="block-color-teal_background">Psychological</h3></div><div style="display:contents" dir="auto"><ul id="2790f804-424d-80df-a6fb-e305f3bd2a1b" class="bulleted-list"><li style="list-style-type:disc">Disciplined anchor: prioritises security over risk.</li></ul></div><div style="display:contents" dir="auto"><ul id="27f0f804-424d-8030-a1f3-f43dadf0ac20" class="bulleted-list"><li style="list-style-type:disc">Focused under pressure: agile turns + composure against press.</li></ul></div><div style="display:contents" dir="auto"><ul id="27f0f804-424d-8076-92ea-e5ff13fb8dcf" class="bulleted-list"><li style="list-style-type:disc">Confident in guiding tempo</li></ul></div><div style="display:contents" dir="auto"><ul id="2840f804-424d-80ca-b8b7-c2b47c99677d" class="bulleted-list"><li style="list-style-type:disc">Shows high consistency and reliability<br/></li></ul></div><div style="display:contents" dir="auto"><p id="27f0f804-424d-80c0-8b29-fc59edafa71d" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="auto"><hr id="2790f804-424d-8026-9f3f-c2790fe1b8dc"/></div><div style="display:contents" dir="auto"><div id="2790f804-424d-806b-8df9-e398a92a9ba0" class="column-list"><div style="display:contents" dir="auto"><div id="2790f804-424d-805a-a971-f5af17cbaaec" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="2790f804-424d-8036-86ef-eaad40e81cc9" class="block-color-yellow_background">Physical</h3></div><div style="display:contents" dir="auto"><ul id="2790f804-424d-80d8-8bc0-e4f8fb9d449b" class="bulleted-list"><li style="list-style-type:disc">Struggles in aerial duels (33% win rate)</li></ul></div><div style="display:contents" dir="auto"><ul id="27f0f804-424d-8013-98b9-e0ef38bc32df" class="bulleted-list"><li style="list-style-type:disc"><strong>Explosive in short movements</strong>, sharp turning and first steps.</li></ul></div><div style="display:contents" dir="auto"><ul id="27f0f804-424d-8090-9aa5-f1595ef33189" class="bulleted-list"><li style="list-style-type:disc"><strong>Lacks long-distance pace</strong>, exposed in large defensive spaces.</li></ul></div><div style="display:contents" dir="auto"><ul id="27f0f804-424d-80df-80da-e214e07746f9" class="bulleted-list"><li style="list-style-type:disc"><strong>Resilient enough</strong> to maintain intensity across matches.</li></ul></div></div></div><div style="display:contents" dir="auto"><div id="2790f804-424d-80ac-b8e2-f4dc5ac68c02" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="2790f804-424d-80f3-bfb4-f7f8d8d96003" class="block-color-orange_background">Social</h3></div><div style="display:contents" dir="auto"><ul id="2790f804-424d-80ca-80e8-c71cf11d1f19" class="bulleted-list"><li style="list-style-type:disc"><strong>Balances rather than leads</strong>: stabiliser, not a vocal organiser.</li></ul></div><div style="display:contents" dir="auto"><ul id="27f0f804-424d-802a-870d-d84d7ab8c6cd" class="bulleted-list"><li style="list-style-type:disc"><strong>Fits structured systems</strong>, reliable facilitator more than dominant personality.</li></ul></div><div style="display:contents" dir="auto"><p id="27f0f804-424d-804d-819c-d963f48c4da4" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="auto"><hr id="2790f804-424d-8078-82c4-d0437e1c94d1"/></div><div style="display:contents" dir="auto"><h3 id="2790f804-424d-8095-9ed0-f68ea39ebab7" class="block-color-blue_background">Summary</h3></div><div style="display:contents" dir="auto"><p id="2840f804-424d-8024-8370-dca63b1f297a" class="">Momo Nakao is a disciplined and agile midfielder who anchors play from deep but also shows tactical versatility, occasionally operating behind the striker. With elite scanning and one-touch ability, she dictates tempo through clean short distribution (~85%) and composure under pressure. Reliable in defensive duels (72.6%) and strong in transitions, she adds balance and structure to Celtic’s midfield. Her aerial weakness (33%) and limited long passing reduce range, but her intelligence and rhythm control make her a valuable asset in possession-based systems.</p></div><div style="display:contents" dir="auto"><p id="2840f804-424d-805a-a9d5-fe9103cacdb7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2840f804-424d-8087-9d83-f98538630302" class=""><strong>Verdict:</strong> A <strong>reliable, tempo-setting midfielder</strong> with agility, composure, and tactical awareness, capable of anchoring play or supporting attacks as an advanced pivot.<br/></p></div><div style="display:contents" dir="ltr"><figure id="27f0f804-424d-8070-b9f6-e00a774e7a48" class="image"><a href="bc6d1d9d68b26af65a2bbd868dc01e1e68d7dd789da06863af59b5d6.png"><img style="width:681.984375px" src="bc6d1d9d68b26af65a2bbd868dc01e1e68d7dd789da06863af59b5d6.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="27f0f804-424d-80cd-ada1-f20d195b6b02" class=""><strong>✅ Key Strengths</strong></p></div><div style="display:contents" dir="ltr"><table id="27f0f804-424d-8087-9161-ffee87b888cf" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="27f0f804-424d-800d-92a4-e7c627db03ef"><th id="}^nr" class="simple-table-header-color simple-table-header">Area</th><th id="{}e[" class="simple-table-header-color simple-table-header" style="width:305px">Comment</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="27f0f804-424d-803b-a14d-f4c34ce9bd84"><td id="}^nr" class="">🎯 <strong>Passing Accuracy (~85%)</strong></td><td id="{}e[" class="" style="width:305px">Keeps possession safe and influences tempo with secure short/medium distribution.</td></tr></div><div style="display:contents" dir="ltr"><tr id="27f0f804-424d-80cc-9cd4-c8d3f1026947"><td id="}^nr" class="">🌀 <strong>Agility &amp; Turning</strong></td><td id="{}e[" class="" style="width:305px">Quick body orientation under pressure; evades opponents with sharp turns.</td></tr></div><div style="display:contents" dir="ltr"><tr id="27f0f804-424d-802a-ad7c-e99b44b8b960"><td id="}^nr" class="">⚡ <strong>Acceleration</strong></td><td id="{}e[" class="" style="width:305px">Escapes pressure over first steps even if lacking top-end pace.</td></tr></div><div style="display:contents" dir="ltr"><tr id="27f0f804-424d-80d7-af83-f8d337599b53"><td id="}^nr" class="">🛡 <strong>Ground Duels (72.6% win)</strong></td><td id="{}e[" class="" style="width:305px">Effective in pressing and defensive recoveries.</td></tr></div><div style="display:contents" dir="ltr"><tr id="27f0f804-424d-80f1-8ba2-ed9773cef07c"><td id="}^nr" class="">📍 <strong>Tempo Control</strong></td><td id="{}e[" class="" style="width:305px">Consistently the deepest midfielder, guiding circulation and transitions.</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="27f0f804-424d-80a1-87c8-c3acea5dece9" class=""><strong>🔻 Weaknesses</strong></p></div><div style="display:contents" dir="ltr"><table id="27f0f804-424d-8043-801f-cfa29d398e3d" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="27f0f804-424d-8039-8d8e-c4e844fa891f"><th id="bdib" class="simple-table-header-color simple-table-header">Area</th><th id="xLAj" class="simple-table-header-color simple-table-header" style="width:336px">Comment</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="27f0f804-424d-80a5-bf0e-f6d3670aedf0"><td id="bdib" class="">🪂 <strong>Aerial Duels (33% win)</strong></td><td id="xLAj" class="" style="width:336px">Vulnerable in long balls and set-piece defending.</td></tr></div><div style="display:contents" dir="ltr"><tr id="27f0f804-424d-80f6-8e82-fd1857ca2f93"><td id="bdib" class="">🏃 <strong>Pace over Distance</strong></td><td id="xLAj" class="" style="width:336px">Lacks recovery speed in large defensive spaces.</td></tr></div><div style="display:contents" dir="ltr"><tr id="27f0f804-424d-8025-a0da-cc4441381a8f"><td id="bdib" class="">🎯 <strong>Long Passing Range</strong></td><td id="xLAj" class="" style="width:336px">Inconsistent accuracy; turnovers expose the team.</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="2830f804-424d-8076-8ed2-f1efed83e9f5" class="">🏆 <strong>Career Summary</strong></h3></div><div style="display:contents" dir="ltr"><table id="2830f804-424d-8022-a74f-ed04470de5a7" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="2830f804-424d-80ca-9d2a-fe3047d589a9"><th id="Fc|y" class="simple-table-header-color simple-table-header"><strong>Club / Team</strong></th><th id="BY&lt;m" class="simple-table-header-color simple-table-header"><strong>Seasons</strong></th><th id="ZNW?" class="simple-table-header-color simple-table-header"><strong>Achievements &amp; Individual Awards</strong></th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="2830f804-424d-80f5-b6c4-f3c447882bae"><td id="Fc|y" class=""><strong>JEF United Chiba Women (Japan)</strong></td><td id="BY&lt;m" class="">– 2020 / 2021 (Youth Academy)</td><td id="ZNW?" class="">Part of JEF United youth setup; won <strong>Japan U18 National Championship</strong> with the club.</td></tr></div><div style="display:contents" dir="ltr"><tr id="2830f804-424d-8004-b7a1-e286e473ad2f"><td id="Fc|y" class=""><strong>University of Memphis (USA)</strong></td><td id="BY&lt;m" class="">2021 – 2024</td><td id="ZNW?" class="">- <strong>AAC Midfielder of the Year (2023)</strong> 🥇                                               - <strong>All-AAC First Team (2023)</strong>              - <strong>AAC All-Tournament Team (2022 &amp; 2023)</strong>                                                   - Helped Memphis win <strong>AAC Tournament Title 2022 &amp; 2023</strong> 🏆   - Named <strong>Team Captain</strong> during final collegiate season.</td></tr></div><div style="display:contents" dir="ltr"><tr id="2830f804-424d-8022-ae84-c8486efc6644"><td id="Fc|y" class=""><strong>Celtic FC Women (Scotland)</strong></td><td id="BY&lt;m" class="">2024/2025 – Present</td><td id="ZNW?" class=""></td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="2830f804-424d-8016-bef2-d5aa37caf029" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,717 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Julieta Morales Viñotti</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2480f804-424d-8087-ac98-cf38c6be8a73" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="julieta_25_thumb_824702e7c4.jpg"/></div><h1 class="page-title" dir="auto">Julieta Morales Viñotti</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Position</th><td><span class="selected-value select-value-color-brown">CAM</span><span class="selected-value select-value-color-purple">ST</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Player Age</th><td>20</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Player Team</th><td>Sport Club Internacional</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Player Height</th><td>166cm / <strong>5&#x27;6&quot;</strong></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/globe_gray.svg" style="width:14px;height:14px;display:block"/></span>Nation</th><td>Uruguay</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/signature-document_gray.svg" style="width:14px;height:14px;display:block"/></span>Contract Status</th><td>Until december 31, 2026</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Rating (0-10)</th><td>7</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Verdict</th><td><span class="selected-value select-value-color-yellow">Development</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Strengths</th><td><span class="selected-value select-value-color-green">Composure</span><span class="selected-value select-value-color-green">Finishing</span><span class="selected-value select-value-color-green">First Touch</span><span class="selected-value select-value-color-green">Speed</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Weaknesses</th><td><span class="selected-value select-value-color-red">Heading</span><span class="selected-value select-value-color-red">Passing</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Fixture</th><td>Copa do Brasil Feminina: Internacional vs Instituto 3B</td></tr><tr class="property-row property-row-person"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/friends_gray.svg" style="width:14px;height:14px;display:block"/></span>Scout Report By</th><td><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocJx1VL9NikhoNGAw24wKrITcWkHAjsnFmqYp8zhZfp16W5jrg=s100" class="icon user-icon"/>Victor Espinola</span></td></tr></tbody></table></header><div class="page-body"><div style="display:contents" dir="auto"><div id="2480f804-424d-80a4-ab36-e7790a6b2958" class="column-list"><div style="display:contents" dir="auto"><div id="2480f804-424d-80c5-9587-e61737abd1f4" style="width:43.75%" class="column"><div style="display:contents" dir="auto"><h3 id="2480f804-424d-808e-abe2-df7f034c670c" class="block-color-red_background">Technical / Tactical</h3></div><div style="display:contents" dir="auto"><ul id="2490f804-424d-8093-a004-d7d89eadc538" class="bulleted-list"><li style="list-style-type:disc"><strong>Contribution in high pressing and ball recovery after loss:</strong> Actively participates in the team’s pressing structure, particularly after turnovers. She shows intensity and intent when closing down opponents, often being the first to initiate the press. While her work rate is undeniable, efficiency can be inconsistent as pressing actions are sometimes mistimed or unsupported by teammates, leading to wasted energy.</li></ul></div><div style="display:contents" dir="auto"><ul id="2490f804-424d-80a2-b7eb-cbbcf18b0387" class="bulleted-list"><li style="list-style-type:disc"><strong>Runs in behind the defensive line:</strong> Frequently looks to exploit depth by making diagonal or straight runs behind defenders. This movement stretches opposing back lines, creates passing lanes, and provides an outlet for through balls.</li></ul></div><div style="display:contents" dir="ltr"><figure id="24a0f804-424d-804e-8774-e84ba57a7c8c" class="image"><a href="image.png"><img style="width:2125px" src="image.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="24a0f804-424d-80ae-aa96-c18920aa275f" class="image"><a href="image%201.png"><img style="width:382px" src="image%201.png"/></a></figure></div><div style="display:contents" dir="auto"><ul id="2490f804-424d-8095-8ffc-ca01d47a1a9b" class="bulleted-list"><li style="list-style-type:disc"><strong>Scanning limitations:</strong> Scans her surroundings infrequently, which reduces her anticipation when receiving passes and limits her decision-making speed, especially in pressing and covering situations. Developing more consistent scanning habits would improve her awareness and efficiency in possession and defensive transitions.</li></ul></div><div style="display:contents" dir="ltr"><figure id="24a0f804-424d-8054-83ca-fae11bf046f8" class="image"><a href="image%202.png"><img style="width:382px" src="image%202.png"/></a></figure></div><div style="display:contents" dir="auto"><ul id="2490f804-424d-8037-b64b-efd529a1063e" class="bulleted-list"><li style="list-style-type:disc"><strong>Passing ability:</strong> Comfortable using her weaker left foot, which allows her to circulate possession effectively and connect with teammates under pressure.</li></ul></div><div style="display:contents" dir="auto"><ul id="24a0f804-424d-80c8-b315-e6a461fea0ee" class="bulleted-list"><li style="list-style-type:disc"><strong>Receiving under pressure:</strong> Utilises strong body positioning when receiving with her back to goal, ensuring secure ball control and enabling her to play forward quickly or draw fouls in advanced areas.</li></ul></div></div></div><div style="display:contents" dir="auto"><div id="2480f804-424d-806c-9588-f79a2da2bab8" style="width:56.25%" class="column"><div style="display:contents" dir="auto"><h3 id="2480f804-424d-80c1-b352-c7c4bc14628a" class="block-color-teal_background">Psychological</h3></div><div style="display:contents" dir="auto"><ul id="2490f804-424d-8014-a6d6-d08e6d543ed9" class="bulleted-list"><li style="list-style-type:disc"><strong>Competitive mentality:</strong> Highly competitive, consistently maintaining offensive aggressiveness and determination.</li></ul></div><div style="display:contents" dir="auto"><ul id="2490f804-424d-8018-80f2-db70fb0d7356" class="bulleted-list"><li style="list-style-type:disc"><strong>Consistency in transitions:</strong> Reliable contributor in both defensive recovery runs and offensive transitions, showing balance between effort in both phases of the game.</li></ul></div><div style="display:contents" dir="auto"><ul id="2490f804-424d-8021-a6b8-d1367fee473b" class="bulleted-list"><li style="list-style-type:disc"><strong>Intensity and commitment:</strong> Displays sustained energy in high pressing and is willing to sacrifice herself physically for the benefit of the team, even at the cost of personal exhaustion.<div style="display:contents" dir="ltr"><figure id="24a0f804-424d-8083-8d6f-d87c33d24ec9" class="image"><a href="presion.png"><img style="width:354px" src="presion.png"/></a></figure></div></li></ul></div><div style="display:contents" dir="auto"><p id="24a0f804-424d-8026-91e2-c45c08ae3bce" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="auto"><hr id="2480f804-424d-8018-a623-fac5dc80a918"/></div><div style="display:contents" dir="auto"><div id="2480f804-424d-80c6-b2a1-ec407431c40c" class="column-list"><div style="display:contents" dir="auto"><div id="2480f804-424d-8064-b643-ff3843b1a1b3" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="2480f804-424d-8001-aceb-d005a2659360" class="block-color-yellow_background">Physical</h3></div><div style="display:contents" dir="auto"><ul id="2490f804-424d-80d6-98c7-c2c28b68a409" class="bulleted-list"><li style="list-style-type:disc"><strong>Explosiveness:</strong> Quick over the first few meters, allowing her to close down space or attack depth effectively.</li></ul></div><div style="display:contents" dir="auto"><ul id="2490f804-424d-8027-a6f3-c7a94bc3f3c9" class="bulleted-list"><li style="list-style-type:disc"><strong>Endurance and intensity:</strong> Maintains a high physical output across the entire match, covering significant distances and performing repeated sprints.</li></ul></div><div style="display:contents" dir="auto"><ul id="2490f804-424d-802c-a084-cfaf11c5f79a" class="bulleted-list"><li style="list-style-type:disc"><strong>Work rate:</strong> Extremely high, sustaining pressing efforts throughout the game. In one observed instance, she was the only player forced to lie down with cramps at the end of the match, a clear sign she had pushed herself to her physical limit.</li></ul></div><div style="display:contents" dir="ltr"><figure id="24a0f804-424d-808e-bc5c-caf86d7aa6ad" class="image"><a href="image%203.png"><img style="width:382px" src="image%203.png"/></a></figure></div><div style="display:contents" dir="auto"><ul id="24a0f804-424d-804d-b200-d556c7f94032" class="bulleted-list"><li style="list-style-type:disc"><strong>Ball shielding:</strong> Uses her body effectively to protect possession, holding off opponents and creating time to link play or win fouls in advanced areas.</li></ul></div><div style="display:contents" dir="auto"><ul id="24a0f804-424d-80bc-9e24-df867d296389" class="bulleted-list"><li style="list-style-type:disc"><strong>Aerial challenges:</strong> Sometimes misjudges the timing of her jumps in aerial duels, which reduces her effectiveness in winning headers despite her willingness to contest them.</li></ul></div></div></div><div style="display:contents" dir="auto"><div id="2480f804-424d-808c-b4b2-fed0e997b862" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="2480f804-424d-80fb-86b1-e44dd4bae7d1" class="block-color-orange_background">Social</h3></div><div style="display:contents" dir="auto"><ul id="2480f804-424d-8025-809e-d01571dae3f6" class="bulleted-list"><li style="list-style-type:disc"><strong>On-pitch communication:</strong> Not very expressive on the field. While she leads through effort and work rate, she is less vocal in organising or motivating teammates compared to more extroverted profiles.</li></ul></div><div style="display:contents" dir="auto"><p id="2490f804-424d-8004-bb72-ca22533c90af" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="auto"><hr id="2480f804-424d-8009-9156-ce55f5605991"/></div><div style="display:contents" dir="auto"><h3 id="2480f804-424d-8029-9ee1-d080a1f91e19" class="block-color-blue_background">Summary</h3></div><div style="display:contents" dir="auto"><ul id="2480f804-424d-80c6-bcf2-e9d01d2b50d9" class="bulleted-list"><li style="list-style-type:disc">Julieta Morales is a <strong>vertical, high-mobility attacking player</strong>, defined by her relentless <strong>runs in behind</strong> and her capacity to sustain an intense <strong>pressing game</strong> over the full 90 minutes. The radar highlights her strengths in <strong>dribbling success, finishing efficiency, and speed</strong>, while her season heatmap shows consistent activity across <strong>inside channels and the final third</strong>. This combination reflects the profile of a <strong>deep runner or wide forward</strong> ideally suited to high-intensity attacking systems.</li></ul></div><div style="display:contents" dir="auto"><ul id="24a0f804-424d-808f-839d-ecf844955506" class="bulleted-list"><li style="list-style-type:disc">Her <strong>physical commitment is unquestionable</strong> – she repeatedly pushes herself to the limit and covers large distances – but part of this output is diminished by <strong>inefficient pressing sequences</strong>, largely due to a lack of collective synchronisation and her <strong>limited scanning habits</strong>, which reduce anticipation and decision-making speed in both attacking and defensive phases.</li></ul></div><div style="display:contents" dir="auto"><ul id="2510f804-424d-80be-9aad-eb59154408fe" class="bulleted-list"><li style="list-style-type:disc">Morales thrives in systems that prioritise <strong>high recoveries and direct attacks</strong>, where her explosiveness, 1v1 skills, and composure in front of goal are maximised. The next step in her development is to refine her <strong>pressing efficiency</strong> and expand her influence in <strong>build-up and creative play</strong>, adding more variety to her attacking contribution.</li></ul></div><div style="display:contents" dir="auto"><p id="2510f804-424d-809f-83cb-f17bb3c4a1d4" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="2490f804-424d-8075-856e-f0c0b42fa637" class="image"><a href="julieta_morales_510_min.png"><img style="width:781.984375px" src="julieta_morales_510_min.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="2490f804-424d-809c-8d48-d2fcedee7f4d" class="image"><a href="image%204.png"><img style="width:392px" src="image%204.png"/></a></figure></div><div style="display:contents" dir="auto"><h3 id="24a0f804-424d-80b8-99c4-f5e76164f007" class=""><strong><span style="border-bottom:0.05em solid">Team Context</span></strong></h3></div><div style="display:contents" dir="ltr"><figure id="24a0f804-424d-800d-8fd6-c3ab0664bbba" class="image"><a href="image%205.png"><img style="width:809.984375px" src="image%205.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="24a0f804-424d-8066-895c-cd195396a63b" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="24a0f804-424d-8078-bdc3-fffb5ea2493a" class=""><strong>✅ Key Strengths (Elite / Above Avg)</strong></h3></div><div style="display:contents" dir="ltr"><table id="24a0f804-424d-80f7-b378-ed6af65da1c7" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="24a0f804-424d-8061-b14f-c01c5ec66c9c"><th id="Royp" class="simple-table-header-color simple-table-header">Area</th><th id="&gt;{;j" class="simple-table-header-color simple-table-header" style="width:552px">Comment</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="24a0f804-424d-8082-989e-cff7eca05a5f"><td id="Royp" class="">🌀 <strong>Dribbling Success – 78.57%</strong></td><td id="&gt;{;j" class="" style="width:552px">Highly effective in 1v1 situations, using acceleration and close control to beat defenders.</td></tr></div><div style="display:contents" dir="ltr"><tr id="24a0f804-424d-8021-8cb7-f6801861ba25"><td id="Royp" class="">🎯 <strong>Finishing Efficiency</strong></td><td id="&gt;{;j" class="" style="width:552px">Converts above her expected goals rate, showing composure and decisiveness inside the box.</td></tr></div><div style="display:contents" dir="ltr"><tr id="24a0f804-424d-80c0-8f1f-d5d789888b9b"><td id="Royp" class="">⚡ <strong>Speed &amp; Acceleration</strong></td><td id="&gt;{;j" class="" style="width:552px">Explosive over short distances, enabling frequent runs in behind and quick separation from markers.</td></tr></div><div style="display:contents" dir="ltr"><tr id="24a0f804-424d-806e-a009-c57b3458c041"><td id="Royp" class="">🏃 <strong>High Work Rate</strong></td><td id="&gt;{;j" class="" style="width:552px">Maintains pressing and forward runs throughout the match, pushing physical limits when required.</td></tr></div><div style="display:contents" dir="ltr"><tr id="24a0f804-424d-8065-8879-ee74489a7fc0"><td id="Royp" class="">🔄 <strong>First Touch</strong></td><td id="&gt;{;j" class="" style="width:552px">Secure control upon reception, allowing her to quickly attack space or link play.</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><hr id="24a0f804-424d-8037-bf1a-da935dbeff66"/></div><div style="display:contents" dir="auto"><h3 id="24a0f804-424d-8025-a917-d5160f813b0f" class=""><strong>🔻 Weaknesses (Below Average / In Development)</strong></h3></div><div style="display:contents" dir="ltr"><table id="24a0f804-424d-80eb-804a-d37998e74451" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="24a0f804-424d-8068-b024-e04f9e5e437f"><th id="iUBG" class="simple-table-header-color simple-table-header">Area</th><th id="b}BG" class="simple-table-header-color simple-table-header" style="width:583px">Comment</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="24a0f804-424d-80cb-9c16-f088ca9dd76d"><td id="iUBG" class="">📡 <strong>Scanning &amp; Awareness</strong></td><td id="b}BG" class="" style="width:583px">Rarely scans surroundings before receiving, limiting anticipation and speed of decision-making.</td></tr></div><div style="display:contents" dir="ltr"><tr id="24a0f804-424d-807f-b05e-c6428f2d1c8e"><td id="iUBG" class="">🎯 <strong>Crossing</strong></td><td id="b}BG" class="" style="width:583px">Low volume and inconsistent accuracy when delivering from wide areas.</td></tr></div><div style="display:contents" dir="ltr"><tr id="24a0f804-424d-801e-a4d6-deddccb186ea"><td id="iUBG" class="">🛡 <strong>Defensive Actions</strong></td><td id="b}BG" class="" style="width:583px">High pressing volume but efficiency reduced due to lack of coordination with team shape.</td></tr></div><div style="display:contents" dir="ltr"><tr id="24a0f804-424d-807d-b85e-ed81bb1ebb25"><td id="iUBG" class="">🪂 <strong>Aerial Ability</strong></td><td id="b}BG" class="" style="width:583px">Limited impact in aerial duels, winning a low percentage of contested headers.</td></tr></div><div style="display:contents" dir="ltr"><tr id="24a0f804-424d-80eb-9b3f-d309c7b1d237"><td id="iUBG" class="">💪 <strong>Strength in Duels</strong></td><td id="b}BG" class="" style="width:583px">Can be outmuscled in physical challenges against stronger defenders.</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="24b0f804-424d-8057-a219-f2be470f51fd" class=""><strong><span style="border-bottom:0.05em solid">Recommended Role:</span></strong></h3></div><div style="display:contents" dir="auto"><ul id="24b0f804-424d-80ef-9242-fd7c9162244f" class="bulleted-list"><li style="list-style-type:disc">Primary option: <strong>Wide forward / second striker</strong> in a pressing and transition-heavy system.</li></ul></div><div style="display:contents" dir="auto"><ul id="24b0f804-424d-800d-8580-f2efb31938e3" class="bulleted-list"><li style="list-style-type:disc">Secondary option: <strong>Central forward</strong> in a two-striker partnership, exploiting depth and space.</li></ul></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

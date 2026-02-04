@@ -1,0 +1,715 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>María Nela Carvajal</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="24a0f804-424d-8067-ba75-fb47e051fb97" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="images.jpg"/></div><h1 class="page-title" dir="auto">María Nela Carvajal</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Position</th><td><span class="selected-value select-value-color-green">CB</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Player Age</th><td>24</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Player Team</th><td>Orsomarso</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Player Height</th><td>182cm / 5’11”</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/globe_gray.svg" style="width:14px;height:14px;display:block"/></span>Nation</th><td>Colombia</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/signature-document_gray.svg" style="width:14px;height:14px;display:block"/></span>Contract Status</th><td>N/A</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/hashtag_gray.svg" style="width:14px;height:14px;display:block"/></span>Rating (0-10)</th><td>8</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Verdict</th><td><span class="selected-value select-value-color-yellow">Development</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Strengths</th><td><span class="selected-value select-value-color-green">Defending</span><span class="selected-value select-value-color-green">Heading</span><span class="selected-value select-value-color-green">Speed</span><span class="selected-value select-value-color-green">Strength</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Weaknesses</th><td><span class="selected-value select-value-color-red">First Touch</span><span class="selected-value select-value-color-red">Passing</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>Fixture</th><td><strong>MEDELLÍN VS. ORSOMARSO FECHA 2</strong></td></tr><tr class="property-row property-row-person"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/friends_gray.svg" style="width:14px;height:14px;display:block"/></span>Scout Report By</th><td><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocJx1VL9NikhoNGAw24wKrITcWkHAjsnFmqYp8zhZfp16W5jrg=s100" class="icon user-icon"/>Victor Espinola</span></td></tr></tbody></table></header><div class="page-body"><div style="display:contents" dir="auto"><div id="24a0f804-424d-8082-a144-fde81047ee40" class="column-list"><div style="display:contents" dir="auto"><div id="24a0f804-424d-80e9-8d35-caf21b6fde3d" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="24a0f804-424d-8004-b9a3-f66daf7e8e77" class="block-color-red_background">Technical / Tactical</h3></div><div style="display:contents" dir="auto"><ul id="24c0f804-424d-8092-8caa-d0ec45202ef4" class="bulleted-list"><li style="list-style-type:disc"><strong>Major aerial threat</strong> in attacking set pieces, with an exceptional scoring output for a central defender. Her height, timing, and heading technique make her extremely difficult to mark.</li></ul></div><div style="display:contents" dir="auto"><ul id="24c0f804-424d-80a7-858d-c9771bb147bb" class="bulleted-list"><li style="list-style-type:disc">Scored <strong>11 goals in the regular season</strong>, an extraordinary figure for her position, combining powerful headed finishes from corners and free-kicks with several well-taken penalties that show her composure under pressure.</li></ul></div><div style="display:contents" dir="auto"><ul id="24c0f804-424d-807c-927b-d9024dc0bbd9" class="bulleted-list"><li style="list-style-type:disc">Frequently anticipates passes before the opponent can control the ball, breaking up attacks early. This proactive reading of play allows her to intercept and neutralise threats high up the pitch.</li></ul></div><div style="display:contents" dir="auto"><ul id="24c0f804-424d-80c6-b36a-db7c0557be86" class="bulleted-list"><li style="list-style-type:disc">When stepping in to anticipate, <mark class="highlight-red_background">she tends to clear immediately rather than retain possession.</mark> Adding composure in these situations could allow her to initiate controlled build-up and relieve pressure more effectively.</li></ul></div><div style="display:contents" dir="auto"><ul id="24c0f804-424d-809c-bebd-f9ebe01b2043" class="bulleted-list"><li style="list-style-type:disc">Comfortable executing long goal-kicks and defensive restarts, often opting for distance to bypass opposition pressing. Her long distribution is a valuable tool in transitioning to attack quickly, though it reflects a more direct style of play than a possession-oriented approach.</li></ul></div><div style="display:contents" dir="auto"><ul id="2500f804-424d-8023-b461-e5cb9ccbaf1a" class="bulleted-list"><li style="list-style-type:disc">As Orsomarso’s <strong>regular penalty taker</strong>, she adds another dimension to her set-piece threat, further boosting her already remarkable goal contribution from centre-back.</li></ul></div></div></div><div style="display:contents" dir="auto"><div id="24a0f804-424d-80d5-a62f-d06138c4de30" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="24a0f804-424d-80ab-9cb0-e0c81dcb884c" class="block-color-teal_background">Psychological</h3></div><div style="display:contents" dir="auto"><ul id="24c0f804-424d-80b6-9897-dfce60f13f45" class="bulleted-list"><li style="list-style-type:disc"><strong>Leadership:</strong> Serves as captain and vocal organiser in the backline, constantly giving instructions, maintaining the team’s shape, and ensuring defensive organisation.</li></ul></div><div style="display:contents" dir="auto"><ul id="24c0f804-424d-8005-aa6b-f20d2dd0ba40" class="bulleted-list"><li style="list-style-type:disc">Shows full confidence in defensive duels, combining assertiveness with discipline to avoid unnecessary fouls.</li></ul></div><div style="display:contents" dir="auto"><ul id="24c0f804-424d-802b-9976-d4d82d2ba6e3" class="bulleted-list"><li style="list-style-type:disc">Competitive and combative in physical contests, consistently demonstrating a willingness to take responsibility in high-pressure situations.</li></ul></div><div style="display:contents" dir="auto"><p id="24c0f804-424d-8000-9597-eadd622914b8" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="auto"><hr id="24a0f804-424d-80f0-99ac-d3145e010e56"/></div><div style="display:contents" dir="auto"><div id="24a0f804-424d-80a6-a754-cb4ea56bbe2d" class="column-list"><div style="display:contents" dir="auto"><div id="24a0f804-424d-801d-98af-c6f743616afa" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="24a0f804-424d-8030-98a9-c03b05091177" class="block-color-yellow_background">Physical</h3></div><div style="display:contents" dir="auto"><ul id="24c0f804-424d-80a7-9f43-ef5bb8e1a7a3" class="bulleted-list"><li style="list-style-type:disc"><strong>Outstanding aerial ability</strong>, combining her natural height with good timing, a strong leap, and excellent positioning.</li></ul></div><div style="display:contents" dir="auto"><ul id="24c0f804-424d-8045-b814-c4095dec5147" class="bulleted-list"><li style="list-style-type:disc">Exceptionally powerful physically, using her frame to dominate in both defensive and attacking duels.</li></ul></div><div style="display:contents" dir="auto"><ul id="24c0f804-424d-80c6-b720-fc7fd0a32c89" class="bulleted-list"><li style="list-style-type:disc">At <strong>182 cm (5’11”)</strong>, she stands out as one of the tallest players in the league, giving her a clear advantage in both boxes.</li></ul></div><div style="display:contents" dir="auto"><ul id="24c0f804-424d-80e9-b8e9-e7ed3667f71a" class="bulleted-list"><li style="list-style-type:disc">Utilises her arms effectively to disrupt, unbalance, and shield against opponents, often engaging in sustained physical contact to win challenges.</li></ul></div></div></div><div style="display:contents" dir="auto"><div id="24a0f804-424d-8048-acb4-c3ad209f5fd4" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="24a0f804-424d-80c8-9c8b-e19e17a4c02c" class="block-color-orange_background">Social</h3></div><div style="display:contents" dir="auto"><ul id="24a0f804-424d-809f-be83-f229f69c4d7c" class="bulleted-list"><li style="list-style-type:disc">Clear on-pitch leader, consistently applauding and encouraging teammates to maintain morale and focus.</li></ul></div><div style="display:contents" dir="auto"><ul id="24c0f804-424d-8010-8ed3-ff4c135832e1" class="bulleted-list"><li style="list-style-type:disc">Commands the defensive structure through constant, proactive communication with her teammates and the goalkeeper.</li></ul></div><div style="display:contents" dir="auto"><ul id="2500f804-424d-8057-b6eb-fd8e42808761" class="bulleted-list"><li style="list-style-type:disc">Projects authority and composure, setting the tone for the rest of the backline through her example and vocal presence.</li></ul></div><div style="display:contents" dir="auto"><p id="24c0f804-424d-801a-b957-c9a13094ec11" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="auto"><hr id="24a0f804-424d-80b0-b382-cbd86e75b1b6"/></div><div style="display:contents" dir="auto"><h3 id="24a0f804-424d-80e1-b563-c4175e02cb22" class="block-color-blue_background">Summary</h3></div><div style="display:contents" dir="auto"><h3 id="24c0f804-424d-80f2-b0bd-e2eab72c51a6" class="">Radar from last season 2024</h3></div><div style="display:contents" dir="ltr"><figure id="24c0f804-424d-805c-ad7f-df443c85bc1b" class="image"><a href="maria_nela_500_min.png"><img style="width:781.984375px" src="maria_nela_500_min.png"/></a></figure></div><div style="display:contents" dir="auto"><h2 id="24c0f804-424d-80d4-a527-c722bd6f0570" class=""><strong><span style="border-bottom:0.05em solid">Radar Analysis</span></strong></h2></div><div style="display:contents" dir="auto"><p id="2500f804-424d-8083-a817-d2e8c6aadc03" class=""><br/>The radar from her previous season underlines María Nela Carvajal’s standout profile as one of the most dominant aerial defenders in the Liga Femenina BetPlay. Her heading metrics are among the highest in the dataset, directly linking to her extraordinary return of <strong>11 goals</strong> in the 2024 regular season – a mix of commanding headers from set pieces and composed penalty finishes. Defensively, she shows high duel success rates and a large volume of defensive actions, reflecting her proactive style of stepping forward to intercept before opponents can bring the ball under control.</p></div><div style="display:contents" dir="auto"><p id="24c0f804-424d-80cc-a91a-c11114c0a73f" class=""><br/>Physically, the data reinforces her reputation as a <strong>powerful, imposing presence</strong>, with above-average scores in strength, aerial reach, and physical duelling. At <strong>182 cm (5’11”)</strong>, she towers over most opponents, allowing her to dictate aerial battles in both penalty areas. Her long passing capability is visible in the metrics, though her <strong><span style="border-bottom:0.05em solid">lower output in short passing</span></strong> and composure under pressure aligns with observed tendencies to clear quickly rather than engage in patient build-up.<br/><br/>Overall, Carvajal profiles as a <strong><span style="border-bottom:0.05em solid">dominant aerial defender and set-piece weapon</span></strong>, capable of influencing both ends of the pitch through her height, anticipation, and leadership. While already a reliable and commanding presence in direct-play systems, further improvement in possession-based play, particularly in composure and short build-up sequences, would make her an even more complete modern centre-back.<br/></p></div><div style="display:contents" dir="auto"><h3 id="24c0f804-424d-8049-a23f-d6052097612d" class=""><strong>✅ Key Strengths (Elite / Above Avg)</strong></h3></div><div style="display:contents" dir="ltr"><table id="24c0f804-424d-8047-8df1-dca73b38c44c" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="24c0f804-424d-8039-9adf-ebdd8bf10d88"><th id="boxK" class="simple-table-header-color simple-table-header">Area</th><th id="EnDh" class="simple-table-header-color simple-table-header" style="width:514px">Comment</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="24c0f804-424d-80ec-a145-e25d3e12ab97"><td id="boxK" class="">🛡 <strong>Aerial Duels – 68.54% win rate</strong></td><td id="EnDh" class="" style="width:514px">Strong in the air, both defensively and offensively.</td></tr></div><div style="display:contents" dir="ltr"><tr id="24c0f804-424d-802a-9c86-ed3174e10f81"><td id="boxK" class="">📍 <strong>Anticipation</strong></td><td id="EnDh" class="" style="width:514px">Reads play early and steps in to intercept before opponent control.</td></tr></div><div style="display:contents" dir="ltr"><tr id="24c0f804-424d-8096-8dcb-e53762c02699"><td id="boxK" class="">💪 <strong>Physical Power</strong></td><td id="EnDh" class="" style="width:514px">Uses size and strength to dominate in defensive duels.</td></tr></div><div style="display:contents" dir="ltr"><tr id="24c0f804-424d-8051-8bd0-d7dddfda46a7"><td id="boxK" class="">🎯 <strong>Set-Piece Threat</strong></td><td id="EnDh" class="" style="width:514px">Effective in attacking set pieces due to height and timing.</td></tr></div><div style="display:contents" dir="ltr"><tr id="24c0f804-424d-8054-8174-f0bfb7e5807f"><td id="boxK" class="">🗣 <strong>Leadership</strong></td><td id="EnDh" class="" style="width:514px">Organizes backline, vocal and motivating presence.</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><hr id="24c0f804-424d-80d9-9612-e48d036067df"/></div><div style="display:contents" dir="auto"><h3 id="24c0f804-424d-8025-9b09-e7168a92a632" class=""><strong>🔻 Weaknesses (Below Average / In Development)</strong></h3></div><div style="display:contents" dir="ltr"><table id="24c0f804-424d-8080-a28c-edaed26cf300" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="24c0f804-424d-804d-b948-f1d9c5d942e5"><th id="ix@@" class="simple-table-header-color simple-table-header">Area</th><th id="wIlf" class="simple-table-header-color simple-table-header" style="width:542px">Comment</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="24c0f804-424d-8014-8bc0-ce4317118bb4"><td id="ix@@" class="">🧘 <strong>Composure in Possession</strong></td><td id="wIlf" class="" style="width:542px">Clears quickly after winning the ball; more patience could enable controlled build-up.</td></tr></div><div style="display:contents" dir="ltr"><tr id="24c0f804-424d-8078-a138-cbee1408a691"><td id="ix@@" class="">🎯 <strong>Short Build-Up Play</strong></td><td id="wIlf" class="" style="width:542px">Preference for long clearances limits options in possession-focused systems.</td></tr></div></tbody></table></div><div style="display:contents" dir="ltr"><figure id="24c0f804-424d-80ba-a210-f7667e84f2a3" class="image"><a href="image.png"><img style="width:809.984375px" src="image.png"/></a></figure></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
